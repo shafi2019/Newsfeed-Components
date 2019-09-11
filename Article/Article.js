@@ -87,35 +87,39 @@ const data = [
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
   }
 ];
-function newComponent(articleInfo) {
-const article = document.createElement('div');
-const articleTitle = document.createElement('h2')
-const articalDate = document.createElement('p')
-const paraOne = document.createElement('p');
-const paraTwo = document.createElement('p');
-const paraThree = document.createElement('p');
-const ArticalButton = document.createElement('span');
 
-article.appendChild(articleTitle);
-article.appendChild(articalDate);
-article.appendChild(paraOne);
-article.appendChild(paraTwo);
-article.appendChild(paraThree);
-article.appendChild(ArticalButton);
+function newComponent(title, date, firstParagraph, secondParagraph, thirdParagraph) {
+  const article = document.createElement('div');
+  const articleTitle = document.createElement('h2')
+  const articleDate = document.createElement('p')
+  const paraOne = document.createElement('p');
+  const paraTwo = document.createElement('p');
+  const paraThree = document.createElement('p');
+  const articleButton = document.createElement('span');
 
-articleTitle.textContent = articleInfo.title;
-articleDate.textContent = articleInfo.date;
-paraOne.textContent = articleInfo.firstParagraph;
-paraTwo.textContent = articleInfo.secondParagraph;
-paraThree.textContent = articleInfo.thirdParagraph;
-ArticalButton.textContent = 'Click here for More Info';
+  article.appendChild(articleTitle);
+  article.appendChild(articleDate);
+  article.appendChild(paraOne);
+  article.appendChild(paraTwo);
+  article.appendChild(paraThree);
+  article.appendChild(articleButton);
 
-article.classList.add('article');
-appendChild.classList.add('date');
-ArticalButton.classList.add('expandButton');
+  articleTitle.textContent = title;
+  articleDate.textContent = date;
+  paraOne.textContent = firstParagraph;
+  paraTwo.textContent = secondParagraph;
+  paraThree.textContent = thirdParagraph;
+  articleButton.textContent = 'Click here for More Info';
 
+  article.classList.add('article');
+  articleDate.classList.add('date');
+  articleButton.classList.add('expandButton');
 
-return article;
+  articleButton.addEventListener('click', (event) => {
+    article.classList.toggle('article-open');
+  })
+
+  return article;
 
 }
 
