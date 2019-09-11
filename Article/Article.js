@@ -96,6 +96,7 @@ function newComponent(title, date, firstParagraph, secondParagraph, thirdParagra
   const paraTwo = document.createElement('p');
   const paraThree = document.createElement('p');
   const articleButton = document.createElement('span');
+  
 
   article.appendChild(articleTitle);
   article.appendChild(articleDate);
@@ -109,7 +110,7 @@ function newComponent(title, date, firstParagraph, secondParagraph, thirdParagra
   paraOne.textContent = firstParagraph;
   paraTwo.textContent = secondParagraph;
   paraThree.textContent = thirdParagraph;
-  articleButton.textContent = 'Click here for More Info';
+  articleButton.textContent =  'Click here for more' + '\u25bc';
 
   article.classList.add('article');
   articleDate.classList.add('date');
