@@ -18,6 +18,7 @@ let menuItems = [
       {each menu item as a list item}
     </ul>
   </div>
+  
 
   The function takes an array as its only argument.
 
@@ -33,3 +34,5 @@ let menuItems = [
   Step 6: add the menu component to the DOM.
   
 */
+
+
