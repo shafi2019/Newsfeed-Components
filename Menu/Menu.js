@@ -8,31 +8,37 @@ let menuItems = [
   'Music',
   'Log Out',
 ];
-const buttonMenu = document.querySelector('menu-button');
 
-function menuComponent(menuItem) {
+const buttonOfMenu = document.querySelector('.menu-button');
+
+function menuComponentOfMenu(menuItem) {
   const menu = document.createElement('div');
   const menuList = document.createElement('ul');
   
   menu.appendChild(menuList);
 
-  menuItems.forEach(item => {
+  menuItem.forEach(item => {
     const menuListOfItems = document.createElement('li');
     menuListOfItems.textContent = item;
     menuList.appendChild(menuListOfItems);
   })
 
   menu.classList.add('menu')
- 
+  
+  buttonOfMenu.addEventListener('click', e => {
+   menu.classList.toggle('menu--open');
+  })
+
   return menu;
 }
-
+const header = document.querySelector('.header')
+header.appendChild(menuComponentOfMenu(menuItems));
 /* 
   Step 1: Write a function that will create a menu component as seen below:
 
   <div class="menu">
     <ul>
-      {each menu item as a list item}menu-button
+      {each menu item as a list item}
     </ul>
   </div>
   
@@ -41,7 +47,7 @@ function menuComponent(menuItem) {
   Step 2: Inside this function, iterate over the array creating a list item <li> element for each item in the array. 
   Add those items to the <ul>
 
-  Step 3: Using a DOM selector, select the menu button (the element with a class of '') currently on the DOM.
+  Step 3: Using a DOM selector, select the menu button (the element with a class of 'menu-button') currently on the DOM.
 
   Step 4: add a click event listener to the menu button. When clicked it should toggle the class 'menu--open' on the menu (your div with a 'menu' class).
 

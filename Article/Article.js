@@ -85,6 +85,21 @@ const data = [
     thirdParagraph: `Hodor hodor - hodor... Hodor hodor hodor hodor. Hodor. Hodor! Hodor hodor, hodor hodor hodor hodor hodor; hodor hodor? Hodor!
           Hodor hodor, HODOR hodor, hodor hodor?! Hodor! Hodor hodor, HODOR hodor, hodor hodor, hodor, hodor hodor. Hodor, hodor.
           Hodor. Hodor, hodor, hodor. Hodor hodor... Hodor hodor hodor?! Hodor, hodor... Hodor hodor HODOR hodor, hodor hodor. Hodor.`
+  },
+  {
+    title: 'What is JavaScript',
+    date: 'Sep 11th, 2019 (Added By Shafi)',
+    firstParagraph: `JavaScript is a scripting language used to create and control dynamic website content, i.e. anything that moves, refreshes, 
+    or otherwise changes on your screen without requiring you to manually reload a web page. `,
+
+    secondParagraph: `An even better way of understanding what JavaScript does is to think about certain web features you use every day and 
+    likely take for granted—like when your Facebook timeline automatically updates on your screen or Google suggests search terms based on a few 
+    letters you’ve started typing. In both cases, that’s JavaScript in action. `,
+
+    thirdParagraph: `The results of JavaScript may seem simple, but there’s a reason why we teach an entire segment on JavaScript in both
+     our Front End Web Developer and Break into Tech Blueprints. Underneath all those great animations and autocompletes—there’s some pretty 
+     fascinating stuff happening. This guide will break down exactly how JavaScript works and why and how to use it, plus the best ways to 
+     learn JavaScript if you’re realizing you need it in your skillset.`
   }
 ];
 
